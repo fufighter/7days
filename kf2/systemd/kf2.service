@@ -1,0 +1,13 @@
+[Unit]
+Description=kf2
+
+[Service]
+ExecStart=/opt/kf2/Binaries/Win64/KFGameSteamServer.bin.x86_64 kf-zedlanding
+WorkingDirectory=/opt/kf2
+User=ubuntu
+
+Restart=on-failure
+RestartSec=60s
+
+[Install]
+WantedBy=multi-user.target
