@@ -1,0 +1,13 @@
+[Unit]
+Description=7days
+
+[Service]
+ExecStart=/bin/bash startserver.sh -configfile=serverconfig.xml
+WorkingDirectory=/opt/7days
+User=ubuntu
+
+Restart=on-failure
+RestartSec=60s
+
+[Install]
+WantedBy=multi-user.target
